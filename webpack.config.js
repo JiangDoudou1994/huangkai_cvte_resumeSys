@@ -13,7 +13,7 @@ module.exports = {
         app: APP_PATH,
     },
     output: {
-        publicPath: '/assets/', //编译好的文件，在服务器的路径,这是静态资源引用路径
+        publicPath: '', //编译好的文件，在服务器的路径,这是静态资源引用路径
         path: PUBLIC_PATH, //编译到当前目录
         filename: '[name].js', //编译后的文件名字
         chunkFilename: '[name].[chunkhash:5].min.js',

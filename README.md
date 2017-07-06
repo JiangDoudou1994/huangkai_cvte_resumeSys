@@ -9,6 +9,8 @@
 
         哇，踩了个雷。configuration.resolve.extensions[0] should not be empty. 这么简单的英文竟然没有看懂。
 
+        踩雷，output:{publicPath}资源的路径，不是js文件，就是图片之类的路径。但是会影响html-webpack-plugin插件引入js的路径。html中src="/app.js"是当前项目绝对路径中的app.js。所以，用相对路径src='app.js'即可。
+
         webpack的module模块配置和plugin配置在官网上都有，非常的清楚。
 
             jsx解析的模块配置。options: {presets: []}里面是预处理的规则，同样是三方库，可以下载。
