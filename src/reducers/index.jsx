@@ -3,7 +3,6 @@ export default function adminReducer(state = initialState, action) {
     //用户管理模块
     case types.userEditSuccess:
       return {
-        ...state,
         userEditRes: action.res
       }
   }
