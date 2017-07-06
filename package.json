@@ -18,6 +18,13 @@
   },
   "homepage": "https://github.com/wudao370859172/huangkai_cvte_resumeSys#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "antd": "^2.11.2",
+    "express": "^4.15.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "redux": "^3.7.1",
+    "webpack": "^3.0.0"
   }
 }
