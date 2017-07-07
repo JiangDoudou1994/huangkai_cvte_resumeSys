@@ -40,6 +40,11 @@
 
         踩坑，因为HtmlWebpackPlugin生成的html会相对output.path路径引入output.filename。所以打包js的路径配置在output.filename中会更方便。
 
+    3.  正常启动express服务器。
+        继续踩坑，配置了一个'*'的路由，结果什么资源访问都会跑到这个路由。
 
+        静态资源可以直接配置app.use(express.static(BUNDLE_PATH));
+        也可以配置一个虚拟的路径，访问时加上这个虚拟路径，文档中有很清楚。
 
+        Hot Module Replacement 实现--hot功能。
         
