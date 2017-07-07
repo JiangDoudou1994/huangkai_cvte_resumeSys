@@ -4,4 +4,8 @@
 
     2. 再创建分支并拉取远程分支 git checkout -b 2b origin/2b
 
-    3  本地分支操作完之后，发布到远程分支。 git pull 2b origin/2b
+    3  本地分支操作完之后，发布到远程分支。 git push origin 2b:2b
+
+##git clone远程分支
+
+    1.  git clone <remote/branch> -b <branch>
