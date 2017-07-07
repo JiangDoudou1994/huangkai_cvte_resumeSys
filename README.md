@@ -23,3 +23,18 @@
         为什么？
 
     
+##b
+    1.  忽略bundle文件不上传= =,配置了个htmlwebpackplugin插件的模板，问题不大。
+        配置个webpack-dev-server。webpack-dev-server配置成功，但是redux暂时不会用。换一个react组件先。
+
+        启动express服务器，没有js文件。
+            需要设置express静态文件位置。
+
+        打包不能识别箭头函数？
+            babel-preset-stage-1 预处理规则解决问题。
+
+        打包文件过大，打包了module的依赖。怎么解决？
+
+        
+
+        

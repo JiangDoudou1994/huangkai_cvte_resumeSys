@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 // //为了路径中不出现 '/'， 使用path.resolve()比较稳。
 var SRC_PATH = path.resolve(__dirname, 'src');
 var APP_PATH = path.resolve(SRC_PATH, 'index');
-var PUBLIC_PATH = path.resolve(__dirname, 'bundle');
+var PUBLIC_PATH = path.resolve(__dirname, 'bundle/assets');
 
 module.exports = {
     // devtool: 'cheap-module-eval-source-map',
@@ -26,7 +26,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['react','es2015']
+                        presets: ['react','es2015','stage-1']
                     }
                 }
             }
@@ -39,8 +39,8 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({  //根据模板插入css/js等生成最终HTML
-            filename: './index.html', //生成的html存放路径，相对于 path
-            // template: './src/template/index.html', //html模板路径
+            filename: '../index.html', //生成的html存放路径，相对于 path.
+            template: './src/index.temp.html', //html模板路径
             hash: false,
         })
     ],
