@@ -35,6 +35,11 @@
 
         打包文件过大，打包了module的依赖。怎么解决？
 
-        
+    2.  webpack-dev-server正常启动，--hot 热替换，会自动打包更新的模块。
+        webpack-dev-server会自动帮我们根据webpack.config.js打包，并发布8080服务器。
+
+        踩坑，因为HtmlWebpackPlugin生成的html会相对output.path路径引入output.filename。所以打包js的路径配置在output.filename中会更方便。
+
+
 
         
