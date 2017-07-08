@@ -16,10 +16,8 @@ app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath, // Same as `output.publicPath` in most cases.
 }));
 
-// app.use(require("webpack-dev-middleware")(compiler, {
-//     noInfo: true, 
-//     publicPath: config.output.publicPath
-// }));
+// app.use(require("webpack-hot-middleware")(compiler))
+
 
 app.use(express.static(BUNDLE_PATH));
 

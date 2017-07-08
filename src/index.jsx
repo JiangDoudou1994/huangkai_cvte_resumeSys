@@ -16,6 +16,7 @@ class NormalLoginForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <div>
+        <h1>whats wrong with you</h1>
         <h1>Hello Redux!</h1>
         <Form onSubmit={this.handleSubmit} className="login-form">
           <FormItem>
