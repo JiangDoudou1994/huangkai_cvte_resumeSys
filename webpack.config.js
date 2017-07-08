@@ -42,8 +42,12 @@ module.exports = {
             filename: './index.html', //生成的html存放路径，相对于 path.
             template: './src/index.temp.html', //html模板路径
             hash: false,
-        })
+        }),
+        new webpack.HotMoudleReplacementPlugin()
     ],
+    devServer: {
+        hot: true,
+    },
     resolve: {
         extensions: ['.js', '.jsx', '.less', '.scss', '.css'], //后缀名自动补全
     }
