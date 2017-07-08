@@ -43,7 +43,7 @@ module.exports = {
             template: './src/index.temp.html', //html模板路径
             hash: false,
         }),
-        new webpack.HotMoudleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
         hot: true,
