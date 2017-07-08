@@ -1,9 +1,9 @@
 ##a
-    #1. express服务器和它请求返回的路径。
+    1. express服务器和它请求返回的路径。
 
-    #2. 全局安装supervisor，并用它启动node服务。
+    2. 全局安装supervisor，并用它启动node服务。
 
-    #3. 做了简单的redux的配置。使用webpack打包，解析es6.
+    3. 做了简单的redux的配置。使用webpack打包，解析es6.
         
         安装webpack解析模块npm install babel-loader babel-core babel-preset-react babel-preset-es2015 --save-dev
 
@@ -35,12 +35,12 @@
 
         打包文件过大，打包了module的依赖。怎么解决？
 
-    #2.  webpack-dev-server正常启动，--hot 热替换，会自动打包更新的模块。
+    2.  webpack-dev-server正常启动，--hot 热替换，会自动打包更新的模块。
         webpack-dev-server会自动帮我们根据webpack.config.js打包，并发布8080服务器。
 
         踩坑，因为HtmlWebpackPlugin生成的html会相对output.path路径引入output.filename。所以打包js的路径配置在output.filename中会更方便。
 
-    #3.  正常启动express服务器。
+    3.  正常启动express服务器。
         继续踩坑，配置了一个'*'的路由，结果什么资源访问都会跑到这个路由。
 
         静态资源可以直接配置app.use(express.static(BUNDLE_PATH));
@@ -48,7 +48,7 @@
 
         Hot Module Replacement 实现--hot功能。
         
-    #4.  使用Hot Module Replacement，先装载webpack-dev-middleware，让自己自定义的server有webpack-dev-server的接口和功能。
+    4.  使用Hot Module Replacement，先装载webpack-dev-middleware，让自己自定义的server有webpack-dev-server的接口和功能。
 
         配置webpack-dev-middleware，让我们的express服务器变得像配置webpackDevServer一样。
         express服务器装载中间件，配置configuration。
@@ -61,10 +61,10 @@
 ##格式更新
 
 ##3b 
-    #webpack-hot-middleware产生的争执。
+    webpack-hot-middleware产生的争执。
         果然，单独的webpack-hot-middleware是没有用的，还需要webpack-dev-middleware。所以这应该只是老版本hot的使用方法，现在应该在configuration里面配置就行了，不需要单独的中间件。
 
-    #页面自动加载。
+    页面自动加载。
         纠结了下webpack --watch 模式以为是更新自动加载页面。其实是webpack中的配置，也就是一个跟打包相关的配置和webpack-dev-server没有关系。
 
 
