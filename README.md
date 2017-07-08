@@ -67,4 +67,6 @@
     ##页面自动加载。
         纠结了下webpack --watch 模式以为是更新自动加载页面。其实是webpack中的配置，也就是一个跟打包相关的配置和webpack-dev-server没有关系。
 
+#4b 
+    ##多人协作GitHub测试。
 
