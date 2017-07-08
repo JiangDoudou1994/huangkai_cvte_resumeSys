@@ -50,8 +50,16 @@
         
     ##4.  使用Hot Module Replacement，先装载webpack-dev-middleware，让自己自定义的server有webpack-dev-server的接口和功能。
 
-        配置webpack-dev-middleware
+        配置webpack-dev-middleware，让我们的express服务器变得像配置webpackDevServer一样。
         express服务器装载中间件，配置configuration。
 
         配置Hot Module Replacement
         webpack-dev-server有的功能都可以在配置文件中加载。
+
+        webpack-dev-middleware的静态资源服务只用于开发环境(启动webpack-dev-server指令的时候静态资源都不用配置)。到了线上环境，应该使用 express.static() 。
+
+##格式更新
+
+#3b 
+    ##webpack-hot-middleware产生的争执。
+        果然，单独的webpack-hot-middleware是没有用的，还需要webpack-dev-middleware。所以这应该只是老版本hot的使用方法，现在应该在configuration里面配置就行了，不需要单独的中间件。

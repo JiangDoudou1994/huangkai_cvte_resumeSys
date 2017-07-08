@@ -1,6 +1,7 @@
 var path = require('path');
 var express = require('express');
 var webpackDevMiddleware = require('webpack-dev-middleware');
+// var hrm = require('webpack-hot-middleware');
 var webpack =require('webpack');
 
 //注意当前文件的引入路径
@@ -12,8 +13,14 @@ var app = express();
 
 app.use(webpackDevMiddleware(compiler, {
   // configuration可以配置在这儿，也可以配置在config文件中。
-  publicPath: "" // Same as `output.publicPath` in most cases.
+  publicPath: config.output.publicPath, // Same as `output.publicPath` in most cases.
 }));
+
+// app.use(require("webpack-dev-middleware")(compiler, {
+//     noInfo: true, 
+//     publicPath: config.output.publicPath
+// }));
+
 app.use(express.static(BUNDLE_PATH));
 
 
