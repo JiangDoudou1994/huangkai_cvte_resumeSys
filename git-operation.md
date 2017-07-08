@@ -10,4 +10,5 @@
 
 ##git clone远程分支
 
-    1.  git clone <remote/branch> -b <branch>
+    1.  git clone -b 4b git@github.com:wudao370859172/huangkai_cvte_resumeSys.git
+        clone远程分支。
