@@ -63,3 +63,8 @@
 #3b 
     ##webpack-hot-middleware产生的争执。
         果然，单独的webpack-hot-middleware是没有用的，还需要webpack-dev-middleware。所以这应该只是老版本hot的使用方法，现在应该在configuration里面配置就行了，不需要单独的中间件。
+
+    ##页面自动加载。
+        纠结了下webpack --watch 模式以为是更新自动加载页面。其实是webpack中的配置，也就是一个跟打包相关的配置和webpack-dev-server没有关系。
+
+
